@@ -1,7 +1,7 @@
 body {
 	font-size: 16px;
 	line-height: 22px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', "Arial", sans-serif;
 	font-weight: normal;
 	color: #ffffff;
 }
@@ -18,7 +18,24 @@ body > input[type="radio"] {
 	background-color: #849d8f;
   /*background-image: url("../img/ice-slider-1.png");*/
   background-repeat: no-repeat;
-  background-position: center 90px;
+  background-position: center 40px;
+	
+	transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.site-wrapper:before,
+.site-wrapper:after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.site-wrapper:before {
+  background-image: url("slide-2.png");
+}
+
+.site-wrapper:after {
+  background-image: url("slide-3.png");
 }
 
 .container {
@@ -58,9 +75,9 @@ ul {
 
 
 .main-menu {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .main-menu > li {
@@ -108,7 +125,6 @@ ul {
 	margin: 0 auto;
 
 	background-color: #f7f6f3;
-	
 	background-clip: content-box;
 	border-radius: 5px;
 	border-top-left-radius: 5%;
@@ -135,7 +151,6 @@ ul {
 	margin-left: 5px;
 	margin-right: 5px;
 */
-	
 	font-weight: bold;
 	border-bottom: 1px solid #d1d0ce;
 	border-top-left-radius: 9%;
@@ -172,10 +187,10 @@ ul {
 .basket a {
 	display: inline-block;
 
-	width: 70px;
 	padding-top: 9px;
 	padding-bottom: 9px;
 	padding-left: 45px;
+	padding-right: 25px;
 	margin-left: 10px;
 	
 	vertical-align: top;
@@ -201,16 +216,18 @@ ul {
 	background-color: rgba(255,255,255,0.2);
 	background-image: url(../img/spritesheet.png);
   background-position: -2px -659px;
+	background-repeat: no-repeat;
 	border-radius: 16px;
 }
 
 .login a:hover {
 	background-position: -2px -709px;
+	background-repeat: no-repeat;
 	background-color: #f7f6f3;
 	color: #323232;
 }
 
-.user-block .search {
+.user-block  {
 	position: relative;
 }
 
@@ -250,9 +267,11 @@ ul {
 	border-top-right-radius: 12px;
 	box-shadow: 0 20px 35px 1px rgba(0, 0, 0, 0.4);
 }
-
-.search .modal-search {
+.modal-window {
 	right: 20px;
+}
+.search .modal-search {
+	right: 40px;
 	width: 341px;
 	height: 83px;
 }
@@ -299,20 +318,19 @@ ul {
 
 .slider {
 	position: relative;
-	margin: 0 auto;
+	padding-top: 270px;
 	text-align: center;
 }
 
-.slider b {
-	display: block;
-	width: 660px;
+.slide-title {
+	margin: 0 auto;
+	margin-bottom: 40px;
+	
+	width: 700px;
 	font-size: 60px;
 	line-height: 60.35px;
 	font-weight: bold;
-	text-align: center;
 	
-	margin: 0 auto;
-	padding-top: 315px;
 }
 
 .slide {
@@ -341,7 +359,7 @@ ul {
 
 .slide-btn{
 	padding: 15px 37px;
-	margin: 40px auto;
+	margin: 0 auto 40px;
 		
 	font-size: 32px;
 	line-height: 44px;
@@ -378,17 +396,17 @@ ul {
 
 #toggle-1:checked ~ .wrapper {
   background-color: #849d8f;
-  background-image: url("../img/ice-slider-1.png");
+  background-image: url("../img/ice-slide-1.png");
 }
 
 #toggle-2:checked ~ .wrapper {
   background-color: #8996a6;
-  background-image: url("../img/ice-slider-2.png");
+  background-image: url("../img/ice-slide-2.png");
 }
 
 #toggle-3:checked ~ .wrapper {
   background-color: #9d8b84;
-  background-image: url("../img/ice-slider-3.png");
+  background-image: url("../img/ice-slide-3.png");
 }
 
 #toggle-1:checked ~ .wrapper label[for="toggle-1"],
@@ -418,7 +436,7 @@ ul {
 
 .stock-raspberries {
 	text-align: right;
-	background: #b20010 url(../img/raspberries2.jpg) no-repeat;
+	background: #b20010 url(../img/raspberries.jpg) no-repeat;
 }
 
 
@@ -426,7 +444,7 @@ ul {
 	padding: 15px 1.75%;
 	width: 45.4%;
 	text-align: right;
-	background: #5c2f13 url(../img/chocolate2.jpg) no-repeat;
+	background: #5c2f13 url(../img/chocolate.jpg) no-repeat;
 	border-radius: 20px;
 }
 
@@ -455,6 +473,7 @@ ul {
 	
 	width: 23.3%;
 	text-align: center;
+	
 }
 
 .ice-item .hit {
@@ -472,6 +491,8 @@ ul {
 .ice-item img {
 	width: 100%;
 	height: auto;
+	border: 1px solid transparent;
+	border-radius: 100%;
 }
 
 .best-offer .ice-item:nth-child(4n+0) {
