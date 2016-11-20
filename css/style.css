@@ -101,7 +101,7 @@ ul {
 	text-decoration: none;
 	font-weight: bold;
 	color: #fff;	
-	border-bottom: 1px solid #a0b4a9;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .main-menu > li:hover{
@@ -587,6 +587,7 @@ ul {
 	width: 100%;
 	text-align: center;
 	vertical-align: bottom;
+	z-index: 30;
 }
 
 .ice-item .button {
@@ -608,7 +609,6 @@ ul {
 	background-color: rgba(245, 245, 245, 0.3);
 	outline: 5px solid rgba(245, 245, 245, 0.3);
 }
-
 
 .features {
 	padding: 21px 20px;
@@ -796,6 +796,7 @@ p.icon-temp::before {
 .social {
 	float: left;
 	width: 23.3%;
+/*	margin-right: 2.2%;*/
 	padding: 30px 0;
 }
 
@@ -846,26 +847,31 @@ p.icon-temp::before {
 }
 
 .inform-footer {
+/*	float: left;*/
 	margin: 0 auto;
+/*	width: 30.6%;*/
 	width: 400px;
-	padding-top: 27px;
-	padding-left: 95px;
+
+/*	padding-left: 35px;*/
+	padding-top: 28px;
+
 }
 
 .inform-footer .column-left {
-	float: left;
-/*	margin-left: 30px;*/
+	display: inline-block;
+	width: 170px;
+	padding-left: 35x;
 }
 
 .inform-footer .column-right {
-
-/*	margin-left: 30px;*/
+	display: inline-block;
+	width: 170px;
+/*	margin-left: -35px;*/
 }
 
 .inform-footer a {
-	display: block;
-/*	padding-right: 30px;*/
-/*	padding: 5px 25px;*/
+	display: inline-block;
+	
 	font-family: inherit;
 	font-size: 13px; 
 	line-height: 18px;
@@ -873,18 +879,50 @@ p.icon-temp::before {
 	color: #fff;
 	text-decoration: none;
 	vertical-align: top;
+	background-clip: content-box;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
+/*
 .inform-footer a:first-child {
 	font-weight: bold;
 }
+*/
 
 .copyright {
 	float: right;
 	width: 23.3%;
+	padding-top: 52px;
+	text-align: right;
+	background-image: url(../img/spritesheet.png);
+	background-repeat: no-repeat;
+	background-position: 65px -206px;
+
 }
 
+.copyright span {
+	font-family: inherit;
+	font-size: 12px; 
+	line-height: 18px;
+	font-weight: inherit;
+	color: #fff;
+}
 
+.copyright a {
+	font-family: inherit;
+	font-size: 12px; 
+	line-height: 18px;
+	font-weight: inherit;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Page catalog */
+
+.product .ice-item:nth-child(4n+0) {
+	margin-right: 0;
+}
 
 
 
